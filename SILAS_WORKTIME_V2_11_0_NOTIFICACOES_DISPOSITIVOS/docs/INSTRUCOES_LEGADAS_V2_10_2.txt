@@ -1,0 +1,24 @@
+SILAS Chef — WorkTime V2.10.2 · BETA REAL
+
+ESTA VERSÃO NÃO É UMA DEMONSTRAÇÃO.
+
+1. Extrai tudo, mantendo a pasta assets ao lado de index.html.
+2. Publica OS FICHEIROS DA PASTA EXTRAÍDA na raiz do teu domínio de testes HTTPS.
+3. Abre o URL e inicia sessão com o utilizador e palavra-passe reais do SILAS.
+4. O login usa o projeto Supabase «silas check». Sem Internet, as picagens não são guardadas.
+5. Depois de entrares confirma, por esta ordem: Hoje, Equipa, Horários, picagens de teste,
+   pedidos, obrigações, Resumo do mês, e Garrafeira em Mais opções.
+6. Faz os testes com dois funcionários e com o registo de assiduidade anterior em paralelo.
+
+Para consulta da Garrafeira, os papéis admin e owner estão autorizados; funcionário não vê a
+Garrafeira por defeito. Os restantes módulos WorkTime mantêm as permissões originais.
+
+NÃO HÁ INSTALAÇÃO, NPM, PYTHON OU BUILD: apenas alojamento estático HTTPS.
+Abrir index.html diretamente também apresenta o LOGIN REAL (não há dados falsos), mas
+em file:// certas funcionalidades do browser são restritas; HTTPS é o ambiente suportado.
+
+Atenção: não use estas verificações como certificação de uso em produção ou de dados
+salariais. Antes de deixar duas pessoas trabalhar sem supervisão, confirmar login real,
+picagens, rede e exportações no domínio publicado. Não use dados falsos de stock real.
+
+A chave no config.js é PUBLICÁVEL; nunca colocar service_role ou API keys secretas aqui.

@@ -1,0 +1,65 @@
+SILAS WORKTIME V2.11.0 — NOTIFICAÇÕES, DISPOSITIVOS E REPOSIÇÃO DE SENHA
+
+O que mudou:
+- Sino de notificações na barra superior da Katia.
+- Mais opções > Notificações: botão «Ativar notificações», tipos de alertas,
+  limite de atrasos recorrentes e avisos do navegador (enquanto a página está aberta).
+- Alertas persistentes de entradas em atraso, atrasos repetidos, possíveis faltas,
+  entradas por registar e tentativas de entrada por novos dispositivos.
+- Pedidos de dispositivos com aprovação, recusa e revogação pela administração.
+- Conta de funcionário/proprietário/chefe de sala: dispositivo novo fica em espera
+  na interface até a Katia autorizar.
+- Acessos especiais > Proprietário / Chefe de Sala > Redefinir palavra-passe:
+  reposição através de convite único com validade de 7 dias.
+
+INSTALAÇÃO EM AMBIENTE DE TESTES — POR ESTA ORDEM:
+1) Fazer cópia de segurança do Supabase e guardar a versão anterior do site.
+2) Analisar e executar supabase/01_alertas_dispositivos.sql no SQL Editor do
+   projeto "silas check" (ref: migutitohhutssivmsgy), preferencialmente primeiro
+   numa base de dados de testes. A migração NÃO foi aplicada por este pacote.
+3) Publicar TODOS os ficheiros deste ZIP no domínio HTTPS de testes (não só index.html).
+4) Abrir com a conta de administração Katia > Notificações > Ativar notificações
+   e guardar preferências. Autorizar avisos do navegador se desejado.
+5) Pedir a um funcionário que inicie sessão num segundo dispositivo. O ecrã
+   deve mostrar "A aguardar autorização"; no painel da Katia surge o pedido.
+   Aprovar e verificar entrada. Testar também recusa e revogação.
+6) Testar atrasos, faltas potenciais e alertas. O varrimento corre quando a
+   administração tem o SILAS aberto (inicialmente e periodicamente).
+7) OPCIONAL: ativar supabase/02_varrimento_automatico_opcional.sql para
+   gerar alertas de assiduidade de 10 em 10 minutos, mesmo sem sessões abertas.
+   A extensão pg_cron e as permissões têm de ser confirmadas nesse ambiente.
+8) Testar reposição de password de um utilizador especial de TESTE. A ligação
+   criada deve ser passada em privado ao titular da conta.
+
+IMPORTANTES LIMITAÇÕES DE SEGURANÇA:
+- A autorização de dispositivos implementada no site É APENAS controlo de UI;
+  ainda NÃO há validação obrigatória dos dispositivos nas Edge Functions
+  existentes nem nas políticas RLS dos restantes módulos. Um cliente que faça
+  chamadas diretas à API com JWT válido pode contornar o bloqueio visual.
+  Não declarar a funcionalidade «antifraude» nem «segurança garantida» até
+  implementar e testar esta verificação em TODOS os endpoints protegidos.
+- O ID do dispositivo é guardado no armazenamento local do navegador. Pode ser
+  perdido quando os dados são apagados ou copiado por software com acesso ao
+  perfil do browser; NÃO é uma impressão digital criptográfica confiável.
+- Não existem notificações push em segundo plano com o site fechado. Os avisos
+  do sistema operativo só surgem se a página estiver aberta, o navegador
+  suportar Notification e a Katia conceder permissão. Os registos permanecem
+  disponíveis na caixa de entrada quando voltar a abrir o site.
+- A migração é indispensável: sem ela o site antigo continua a abrir, mas as
+  novas funcionalidades não funcionam. O ecrã de Notificações indica o problema.
+- Ao ativar o controlo, funcionários que entrem pela primeira vez têm de ser
+  autorizados; a administração é autoautorizada para evitar bloqueio completo.
+- A reposição da palavra-passe modifica a conta Auth quando o titular conclui
+  a ligação. Sessões anteriores podem manter-se ativas até caducarem/revogação.
+- As "possíveis faltas" são alertas provisórios e não substituem validação
+  administrativa, registos de baixas/férias nem cálculo salarial.
+
+NÃO FOI TESTADO NESTA ENTREGA:
+- Alterações ao Supabase real ou autenticações/picagens reais: o projeto não
+  foi alterado remotamente para evitar mudanças não validadas.
+- Entrega nativa de notificações com a página fechada.
+- Garantia de bloqueio de acesso na API, que exige trabalho de backend.
+
+Ficheiros: index.html, assets/js/app.js, assets/js/alert-center.js,
+assets/css/alert-center.css, supabase/01_alertas_dispositivos.sql,
+supabase/02_varrimento_automatico_opcional.sql.

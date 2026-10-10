@@ -1,0 +1,19 @@
+SILAS WorkTime V2.10.3 — REMOÇÃO DE FUNCIONÁRIOS
+
+Equipa > cartão do funcionário > Remover.
+
+A remoção é LÓGICA, não uma eliminação física definitiva:
+- Exige a confirmação exata do utilizador.
+- Bloqueia a conta no WorkTime (active=false).
+- Oculta o funcionário dos cartões de Equipa, horários e listas operacionais.
+- Impede reentrada através da validação de perfil inativo no frontend e das validações de perfil ativo das Edge Functions atuais.
+- Mantém registos históricos, nome e referências para auditoria.
+- Marca internamente employee_code com REMOVIDO-AAAAMMDD-ID para distinguir de Desativar.
+- Horários previstos após a data de remoção deixam de ser contabilizados no ecrã.
+- Mantém o mesmo login técnico no Supabase Auth e reserva o username original; a limpeza física do utilizador Auth não é feita aqui.
+
+Desativar continua a funcionar como estado reversível.
+
+Instalação: substituir todos os ficheiros antigos pelos deste ZIP e limpar a cache do navegador. A versão usa a Edge Function «worktime-actions», ação existente «update_employee_bundle». Não requer migration SQL.
+
+Validações: sintaxe dos ficheiros JS e integridade do ZIP. NÃO foi possível executar um ensaio autenticado com alteração real de empregado. Testar com um utilizador criado para este fim (não usar um funcionário real no primeiro teste).

@@ -1,0 +1,193 @@
+/* V2.9 — the administrator's work, in the order she needs it. */
+body.silas-signature .nav-help{font-size:11px;line-height:1.6;color:#756657;padding:0 12px;margin:5px 0 0}
+body.silas-signature .katia-welcome{align-items:center;border-bottom:0;margin-bottom:23px;padding-bottom:0}
+body.silas-signature .katia-welcome .title{font-size:44px;margin:8px 0}
+body.silas-signature .katia-welcome .eyebrow{font-size:12px;text-transform:none;letter-spacing:0;color:#80574b}
+body.silas-signature .today-date{display:flex;gap:10px;align-items:center;color:#766553;font-size:13px;white-space:nowrap}
+body.silas-signature .today-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:0 0 28px;background:var(--paper)}
+body.silas-signature .today-summary-item{display:grid;text-align:left;gap:12px;border:0;border-right:1px solid var(--line);background:transparent;padding:22px 25px;color:var(--text)}
+body.silas-signature .today-summary-item:last-child{border-right:0}
+body.silas-signature .today-summary-item:hover{background:#ede5d9}
+body.silas-signature .today-summary-item>span{font-size:13px;font-weight:500}
+body.silas-signature .today-summary-item>strong{font:40px/1 var(--display);letter-spacing:-.04em}
+body.silas-signature .today-summary-item>strong small{font:12px/1.4 Arial,sans-serif;color:#786b5d;margin-left:8px;letter-spacing:0}
+body.silas-signature .today-summary-item>em{font-size:12px;font-style:normal;color:#786b5d}
+body.silas-signature .today-summary-item:first-child{background:var(--dark);color:#fff7e9}
+body.silas-signature .today-summary-item:first-child:hover{background:#6b3841}
+body.silas-signature .today-summary-item:first-child :is(em,small){color:#e7cbb0}
+body.silas-signature .today-summary-item.needs-action>strong{color:var(--dark)}
+body.silas-signature .today-workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:26px;margin-bottom:30px;align-items:start}
+body.silas-signature .today-priorities{border:1px solid var(--line);border-top:3px solid var(--dark);background:var(--paper);border-radius:3px}
+body.silas-signature .today-section-head{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:22px 24px}
+body.silas-signature .today-section-head h2{font-size:21px;font-weight:500;letter-spacing:-.035em;margin:5px 0 0}
+body.silas-signature .today-section-head p{font-size:13px;color:var(--muted);margin:7px 0 0}
+body.silas-signature .today-section-head .panel-kicker{font-size:10px;color:#846049}
+body.silas-signature .today-action{display:grid;grid-template-columns:31px minmax(0,1fr) auto;gap:12px;align-items:start;padding:21px 24px;border-top:1px solid var(--line)}
+body.silas-signature .today-action>.btn{align-self:center;min-height:42px;font-size:12px;white-space:nowrap;padding:10px 13px}
+body.silas-signature .action-symbol{height:30px;width:30px;background:#f0e4d8;display:grid;place-items:center;border-radius:3px;color:var(--accent)}
+body.silas-signature .attention-action .action-symbol{background:#f3eee5;color:#89704e}
+body.silas-signature .action-symbol .nav-icon{width:17px;height:17px}
+body.silas-signature .action-kind{font-size:10px;color:#89715e}
+body.silas-signature .today-action h3{font-size:15px;font-weight:550;letter-spacing:-.02em;line-height:1.45;margin:5px 0}
+body.silas-signature .today-action p{font-size:12px;color:var(--muted);line-height:1.5;margin:0;max-width:420px}
+body.silas-signature .today-more-actions{display:flex;gap:18px;flex-wrap:wrap;padding:14px 24px;border-top:1px solid var(--line)}
+body.silas-signature .today-side{display:grid;gap:18px}
+body.silas-signature .today-month{background:#e8dfd1;border:1px solid #d3c5b2;padding:24px;border-radius:3px}
+body.silas-signature .today-month h2{font:29px/1.2 var(--display);letter-spacing:-.035em;margin:12px 0 14px}
+body.silas-signature .today-month p{font-size:13px;line-height:1.6;color:#6b5c4b;margin:17px 0}
+body.silas-signature .today-month>.btn{width:100%;font-size:12px;justify-content:space-between;padding:12px;min-height:46px}
+body.silas-signature .today-month>small{display:block;font-size:11px;line-height:1.5;color:#746451;margin-top:12px}
+body.silas-signature .today-tasks{padding:18px 22px;border-top:1px solid #c7b79e}
+body.silas-signature .today-tasks>strong{font-size:17px;font-weight:500;display:block;margin:12px 0 0}
+body.silas-signature .today-tasks p{color:var(--muted);font-size:12px;margin:6px 0}
+body.silas-signature .today-team{border:1px solid var(--line);background:var(--paper);border-radius:3px}
+body.silas-signature .today-team .table-tools{padding:0 24px 20px;display:flex}
+body.silas-signature .today-team .table-tools .search-field{flex:1;max-width:300px}
+body.silas-signature .today-team .result-count{font-size:11px}
+body.silas-signature .today-person{display:grid;grid-template-columns:minmax(170px,1fr) minmax(160px,1fr) auto;gap:20px;align-items:center;border-top:1px solid var(--line);padding:17px 24px}
+body.silas-signature .today-person:hover{background:#f8f2e8}
+body.silas-signature .today-person-name{display:flex;gap:12px;align-items:center;min-width:0}
+body.silas-signature .today-person-name>div{display:grid;gap:4px;min-width:0}
+body.silas-signature .today-person-name strong{font-size:14px;font-weight:550;overflow-wrap:anywhere}
+body.silas-signature .today-person-name small{font-size:12px;color:var(--muted)}
+body.silas-signature .today-person .avatar{width:35px;height:35px;flex:0 0 35px}
+body.silas-signature .today-person-status{display:grid;justify-items:start;gap:5px}
+body.silas-signature .today-person-status small{font-size:11px;color:var(--muted)}
+body.silas-signature .today-person>.btn{font-size:12px}
+body.silas-signature .today-clear{text-align:left;padding:27px 25px;background:#f3f4eb;border-top:1px solid #dce0d0}
+body.silas-signature .today-clear>span{color:#526847;font-size:24px}
+body.silas-signature .today-clear h3{font-size:18px;font-weight:500;margin:8px 0}
+body.silas-signature .today-clear p{font-size:13px;color:var(--muted);margin:0;line-height:1.6}
+body.silas-signature .katia-more section{margin:22px 0 0}
+body.silas-signature .katia-more h4{text-transform:uppercase;letter-spacing:.08em;font-size:10px;color:#8a6b51;font-weight:500;margin:0 0 8px}
+body.silas-signature .katia-more .more-nav-list{gap:0}
+body.silas-signature .katia-more .more-nav-item{display:flex;gap:14px;padding:13px 5px;border:0;border-bottom:1px solid var(--line);background:transparent;min-height:66px;border-radius:0;text-align:left;align-items:center}
+body.silas-signature .katia-more .more-nav-item>span{flex:1;display:grid;gap:4px}
+body.silas-signature .katia-more .more-nav-item strong{font-size:14px;font-weight:500}
+body.silas-signature .katia-more .more-nav-item small{font-size:12px;line-height:1.5;color:var(--muted)}
+body.silas-signature .katia-more .more-nav-item>svg{color:var(--accent)}
+body.silas-signature .katia-more .more-nav-item>b{font-weight:400;color:#9b7b5c}
+body.silas-signature .katia-more .more-nav-item:hover,body.silas-signature .katia-more .more-nav-item.is-current{background:#f1e8dc}
+body.silas-signature .katia-corrections{max-width:1100px}
+body.silas-signature .request-page-intro{background:#eae1d4;border-left:3px solid #987456;padding:18px 22px;margin-bottom:24px}
+body.silas-signature .request-page-intro>strong{font-size:16px;font-weight:550}
+body.silas-signature .request-page-intro>p{font-size:13px;color:#72614e;line-height:1.55;margin:7px 0 0}
+body.silas-signature .katia-request-list{display:grid;gap:18px}
+body.silas-signature .katia-request{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:24px}
+body.silas-signature .request-person{display:flex;gap:12px;align-items:center}
+body.silas-signature .request-person .avatar{width:39px;height:39px}
+body.silas-signature .request-person>div{flex:1}
+body.silas-signature .request-person h3{font-size:17px;font-weight:550;margin:0 0 3px}
+body.silas-signature .request-person small{font-size:12px;color:var(--muted)}
+body.silas-signature .request-change{font-size:17px;font-weight:500;display:block;margin:23px 0 15px;line-height:1.5}
+body.silas-signature .request-reason{background:#f5efe6;border-left:2px solid #ccb395;padding:12px 15px;font-size:14px;line-height:1.6;margin:0 0 20px;white-space:pre-wrap;overflow-wrap:anywhere}
+body.silas-signature .request-reason>span{font-size:11px;color:#7e6852;display:block;margin-bottom:5px}
+body.silas-signature .request-card-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+body.silas-signature .request-card-footer small{color:var(--muted);font-size:12px}
+body.silas-signature .request-card-footer>.btn{min-width:135px}
+body.silas-signature .request-admin-note{font-size:13px;line-height:1.6;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}
+body.silas-signature .request-history{margin-top:30px;border-top:1px solid var(--line)}
+body.silas-signature .request-history>summary{cursor:pointer;font-size:14px;color:var(--accent);padding:19px 2px;min-height:48px}
+body.silas-signature .request-history>summary span{margin-left:10px;color:var(--muted);font-size:12px}
+body.silas-signature .decision-intro{font-size:14px;line-height:1.6;color:var(--muted)}
+body.silas-signature .correction-comparison{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #d8cbb9;margin:22px 0;background:#f5eee4}
+body.silas-signature .correction-comparison>div{display:grid;gap:10px;padding:19px;align-content:start;min-width:0}
+body.silas-signature .correction-comparison>div+div{border-left:1px solid #d8cbb9;background:#eae8da}
+body.silas-signature .correction-comparison span{font-size:11px;color:#75624c}
+body.silas-signature .correction-comparison strong{font-size:15px;font-weight:550;line-height:1.55;overflow-wrap:anywhere}
+body.silas-signature .decision-reason{padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+body.silas-signature .decision-reason strong{font-size:12px;font-weight:500;color:#846850}
+body.silas-signature .decision-reason p{font-size:14px;line-height:1.55;margin:7px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+body.silas-signature .decision-warning{padding:14px;background:var(--amberbg);border:1px solid #d9b27b;color:#744911;font-size:13px;line-height:1.6}
+body.silas-signature #reviewNote{min-height:80px}
+body.silas-signature .decision-effect{font-size:12px;color:var(--muted);line-height:1.55}
+body.silas-signature .decision-actions{flex-wrap:wrap;gap:10px}
+body.silas-signature .decision-actions>.btn{font-size:12px;min-height:44px}
+body.silas-signature .month-simple-guide{display:flex;align-items:center;gap:22px;padding:16px 20px;background:#ede5d9;border:1px solid #dacdbb;border-radius:3px;margin:0 0 24px}
+body.silas-signature .month-simple-guide>strong{font-size:13px;font-weight:550;white-space:nowrap}
+body.silas-signature .month-simple-guide ol{display:flex;flex-wrap:wrap;gap:6px 28px;padding:0 0 0 18px;margin:0;color:#70614f;font-size:12px;line-height:1.6}
+@media(min-width:821px) and (max-width:1180px){
+ body.silas-signature .today-workspace{grid-template-columns:minmax(0,1fr) 230px;gap:20px}
+ body.silas-signature .today-action{grid-template-columns:27px minmax(0,1fr);padding:19px;gap:10px}
+ body.silas-signature .today-action>.btn{grid-column:2;justify-self:start;margin-top:3px}
+ body.silas-signature .today-month{padding:20px}
+ body.silas-signature .today-person{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+ body.silas-signature .today-person>.btn{grid-column:2;justify-self:start}
+ body.silas-signature .today-summary-item{padding:20px 18px}
+ body.silas-signature .today-summary-item>span{font-size:12px}
+}
+@media(max-width:820px){
+ body.silas-signature .katia-welcome{display:block;margin-bottom:23px}
+ body.silas-signature .katia-welcome .title{font-size:35px;margin:8px 0}
+ body.silas-signature .katia-welcome .sub{font-size:13px}
+ body.silas-signature .today-date{font-size:11px;margin-top:15px;gap:7px}
+ body.silas-signature .today-date svg{width:15px;height:15px}
+ body.silas-signature .today-summary{grid-template-columns:1fr 1fr;margin-bottom:24px}
+ body.silas-signature .today-summary-item{padding:18px 16px;gap:10px}
+ body.silas-signature .today-summary-item:first-child{grid-column:1/-1;grid-template-columns:1fr auto;align-items:center;border:0}
+ body.silas-signature .today-summary-item:first-child>span{grid-column:1}
+ body.silas-signature .today-summary-item:first-child>strong{grid-column:2;grid-row:1/3;font-size:36px}
+ body.silas-signature .today-summary-item:first-child>strong small{display:none}
+ body.silas-signature .today-summary-item:first-child>em{grid-column:1}
+ body.silas-signature .today-summary-item>strong{font-size:32px}
+ body.silas-signature .today-summary-item>strong small{font-size:10px;margin-left:5px}
+ body.silas-signature .today-summary-item>span{font-size:12px}
+ body.silas-signature .today-summary-item>em{font-size:11px;line-height:1.5}
+ body.silas-signature .today-workspace{grid-template-columns:1fr;gap:23px;margin-bottom:24px}
+ body.silas-signature .today-section-head{padding:20px 18px;align-items:start}
+ body.silas-signature .today-section-head h2{font-size:19px}
+ body.silas-signature .today-section-head p{font-size:12px}
+ body.silas-signature .today-action{grid-template-columns:27px minmax(0,1fr);padding:18px;gap:10px}
+ body.silas-signature .today-action>.btn{grid-column:2;justify-self:stretch;margin-top:4px;min-height:43px;font-size:12px}
+ body.silas-signature .today-action h3{font-size:15px}
+ body.silas-signature .today-action p{font-size:12px}
+ body.silas-signature .today-more-actions{padding:13px 18px}
+ body.silas-signature .today-side{gap:5px}
+ body.silas-signature .today-month{padding:22px}
+ body.silas-signature .today-month h2{font-size:28px}
+ body.silas-signature .today-month>.btn{min-height:46px}
+ body.silas-signature .today-tasks{margin-top:18px;padding:18px 22px 0}
+ body.silas-signature .today-team .today-section-head{flex-wrap:wrap;gap:5px}
+ body.silas-signature .today-team .table-tools{padding:0 18px 18px;gap:12px}
+ body.silas-signature .today-team .table-tools .search-field{max-width:none;flex:1 1 100%;width:100%}
+ body.silas-signature .today-team .segmented{width:100%;justify-content:space-between}
+ body.silas-signature .today-team .segmented button{flex:1;padding:7px;font-size:11px}
+ body.silas-signature .today-team .result-count{margin-left:0;width:100%}
+ body.silas-signature .today-person{grid-template-columns:minmax(0,1fr) auto;padding:18px;gap:12px}
+ body.silas-signature .today-person-name{grid-column:1/-1;gap:11px}
+ body.silas-signature .today-person-status{grid-column:1;min-width:0;align-self:center}
+ body.silas-signature .today-person>.btn{grid-column:2;align-self:center;padding:10px;font-size:11px;min-height:44px}
+ body.silas-signature .today-person-status .badge{font-size:10px;line-height:1.4}
+ body.silas-signature .today-person-status small{font-size:10px;line-height:1.5}
+ body.silas-signature .katia-more .more-nav-item{min-height:75px}
+ body.silas-signature .katia-more .more-nav-item strong{font-size:13px}
+ body.silas-signature .katia-more .more-nav-item small{font-size:11px}
+ body.silas-signature .request-page-intro{padding:16px 18px}
+ body.silas-signature .katia-request{padding:20px 18px}
+ body.silas-signature .request-change{font-size:16px;margin-top:20px}
+ body.silas-signature .request-card-footer{flex-direction:column;align-items:stretch;gap:13px}
+ body.silas-signature .request-card-footer>.btn{width:100%;min-height:45px}
+ body.silas-signature .request-history>summary{font-size:13px}
+ body.silas-signature .correction-comparison{grid-template-columns:1fr;margin:18px 0}
+ body.silas-signature .correction-comparison>div{padding:15px;gap:7px}
+ body.silas-signature .correction-comparison>div+div{border-left:0;border-top:1px solid #d8cbb9}
+ body.silas-signature .correction-comparison strong{font-size:14px}
+ body.silas-signature .decision-actions{display:grid;grid-template-columns:1fr 1fr}
+ body.silas-signature .decision-actions #reviewSubmit{grid-column:1/-1;min-height:48px;order:-1}
+ body.silas-signature .decision-actions>.btn{padding:11px 8px;font-size:12px}
+ body.silas-signature .month-simple-guide{display:block;padding:17px 19px}
+ body.silas-signature .month-simple-guide ol{display:grid;gap:6px;padding-left:18px;margin-top:11px;font-size:12px}
+}
+@media(max-width:380px){
+ body.silas-signature .katia-welcome .title{font-size:32px}
+ body.silas-signature .today-summary-item{padding:17px 13px}
+ body.silas-signature .today-summary-item>span{font-size:11px}
+ body.silas-signature .today-summary-item>em{font-size:10px}
+ body.silas-signature .today-action{padding:17px 14px;gap:9px}
+ body.silas-signature .today-section-head{padding:18px 14px}
+ body.silas-signature .today-section-head h2{font-size:18px}
+ body.silas-signature .today-person{padding:16px 14px;gap:10px}
+ body.silas-signature .today-person>.btn{font-size:10px;padding:10px 8px}
+}
+@media print{body.silas-signature .today-summary-item:first-child{background:white;color:black}body.silas-signature .today-summary-item:first-child :is(em,small){color:black}}
+body.silas-signature .katia-more .more-nav-item small{font-weight:400}

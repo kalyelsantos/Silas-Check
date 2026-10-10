@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Silas Chef — Picagem e Assiduidade</title>
+<meta name="description" content="Sistema de picagem e gestão de assiduidade do Silas Chef." />
+<meta name="theme-color" content="#592a32" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Silas Chef" />
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+<meta name="robots" content="noindex,nofollow,noarchive" />
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/interface.css" />
+<link rel="stylesheet" href="assets/css/signature.css" />
+<link rel="stylesheet" href="assets/css/katia.css" />
+<link rel="stylesheet" href="assets/css/desktop.css" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://migutitohhutssivmsgy.supabase.co wss://migutitohhutssivmsgy.supabase.co; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'">
+<link rel="stylesheet" href="assets/css/wines.css" />
+<link rel="stylesheet" href="assets/css/alert-center.css?v=2.11.0" />
+</head>
+<body class="worktime-ui silas-signature">
+<a class="skip-link" href="#viewRoot">Saltar para o conteúdo</a>
+<div id="connectionBanner" class="connection-banner hidden">Sem ligação à Internet · nenhuma picagem será enviada</div>
+<section id="login" class="login">
+  <div class="login-side"><div class="brand brand-silas"><img class="brand-logo" src="assets/branding/silas-chef-logo.png" alt="Silas Chef"><span id="loginBrand">Silas Chef</span></div><div class="login-copy"><div class="login-overline">A CASA · A EQUIPA · O DIA A DIA</div><h1>A casa começa<br>na <em>equipa.</em></h1><p>Horários, presenças e obrigações da equipa do Silas Chef.</p></div><div class="login-footer"><span>WORKTIME</span><span>Feito para o nosso dia a dia.</span></div></div>
+  <div class="login-main"><form id="loginForm" class="login-card"><div class="login-kicker">Área reservada</div><h2>O teu dia<br> começa aqui.</h2><p>Entra para registar o teu horário e acompanhar a equipa.</p><div id="loginError" class="error hidden" role="alert">Utilizador ou palavra-passe incorretos.</div><div class="field"><label for="username">Utilizador</label><input id="username" autocomplete="username" autocapitalize="none" spellcheck="false" required></div><div class="field"><label for="password">Palavra-passe</label><div class="password-input"><input id="password" type="password" autocomplete="current-password" required><button type="button" id="togglePassword" class="password-toggle" aria-label="Mostrar palavra-passe">Mostrar</button></div><div id="capsWarning" class="field-hint hidden">Caps Lock está ativo.</div></div><button id="loginSubmit" class="btn btn-dark w100" type="submit">Entrar</button><div class="login-help">Se não conseguires entrar, fala com a administração para confirmar o teu acesso.</div></form></div>
+</section>
+
+<section id="devicePending" class="device-gate hidden" aria-live="polite"><div class="device-gate-card"><div class="brand brand-silas"><img class="brand-logo" src="assets/branding/silas-chef-logo.png" alt="Silas Chef"><span>SILAS WORKTIME</span></div><div class="device-gate-icon">▣</div><h1 id="devicePendingTitle">Dispositivo a aguardar autorização</h1><p id="devicePendingBody"></p><small id="devicePendingLabel"></small><div class="device-gate-actions"><button type="button" id="deviceRetry" class="btn btn-primary">Verificar autorização</button><button type="button" id="deviceLogout" class="btn btn-soft">Terminar sessão</button></div></div></section>
+
+<section id="app" class="shell hidden">
+  <aside class="sidebar"><div class="brand brand-silas"><img class="brand-logo" src="assets/branding/silas-chef-logo.png" alt="Silas Chef logo"><span id="brandName">Silas Chef</span><span class="brand-wordmark">Silas Chef<small>WORKTIME · ÁREA DA EQUIPA</small></span></div><nav id="sideNav" class="nav" aria-label="Navegação principal"></nav><div class="side-bottom"><strong id="sideName"></strong><br><span id="sideRole"></span><br><button id="logout" class="logout">Terminar sessão</button></div></aside>
+  <main class="main"><header class="topbar"><img class="topbar-mark" src="assets/branding/silas-chef-logo.png" alt="Silas Chef"><div class="topbar-copy"><span id="topContext">Silas Chef</span><h2 id="topTitle">WorkTime</h2></div><button type="button" id="alertBell" class="alert-bell hidden" aria-label="Notificações"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span id="alertBadge" class="alert-bell-badge hidden">0</span></button><button class="userbox" type="button" id="accountButton" aria-label="Abrir a minha conta"><span id="topName"></span><span id="topAvatar" class="avatar"></span></button></header><div id="viewRoot" tabindex="-1"></div></main>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Navegação principal no telemóvel"></nav>
+</section>
+
+<div id="modalRoot"></div><div id="toast" class="toast hidden" role="status" aria-live="polite"></div><input id="restoreFile" type="file" accept="application/json" class="hidden" />
+<script src="assets/js/config.js"></script>
+<script src="assets/js/bootstrap.js?v=2.11.0"></script>
+</body>
+</html>

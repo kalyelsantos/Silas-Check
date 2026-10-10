@@ -1,0 +1,25 @@
+{
+  "name": "Silas Chef — Picagem e Assiduidade",
+  "short_name": "Silas Chef",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f4f1",
+  "theme_color": "#592a32",
+  "description": "Picagem, horários, operações e assiduidade do Silas Chef.",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

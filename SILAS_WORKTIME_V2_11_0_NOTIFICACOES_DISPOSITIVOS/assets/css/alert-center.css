@@ -1,0 +1,71 @@
+/* SILAS WorkTime · Centro de notificações V2.11 */
+.alert-bell{position:relative;display:inline-grid;place-items:center;width:42px;height:42px;flex:0 0 42px;appearance:none;border:1px solid rgba(89,42,50,.14);border-radius:13px;background:#fff;color:#592a32;cursor:pointer;margin-left:auto;transition:background .2s,transform .2s}
+.alert-bell:hover{background:#fbf1f0;transform:translateY(-1px)}
+.alert-bell:focus-visible{outline:3px solid #b17b77;outline-offset:2px}
+.alert-bell.hidden{display:none}
+.alert-bell-badge{position:absolute;right:-5px;top:-5px;min-width:19px;height:19px;border-radius:20px;background:#b34d46;color:#fff;border:2px solid #fff;font-size:10px;font-weight:800;padding:1px 4px;line-height:15px;text-align:center}
+.alert-bell-badge.hidden{display:none}
+.alert-center{max-width:1330px;margin-inline:auto;padding-bottom:80px}
+.alert-page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;margin:4px 0 30px}
+.alert-page-head h1{font-size:clamp(30px,3vw,43px);line-height:1.12;letter-spacing:-.055em;color:#291e1d;margin:9px 0}
+.alert-page-head p{font-size:14px;color:#786963;margin:0}
+.alert-page-head .btn{flex-shrink:0}
+.alert-layout{display:grid;grid-template-columns:minmax(310px,.94fr) minmax(360px,1.06fr);align-items:start;gap:22px;margin:0 0 22px}
+.alert-panel{background:#fff;border:1px solid #eae2db;border-radius:20px;box-shadow:0 4px 26px rgba(55,40,30,.04);overflow:hidden}
+.alert-panel-head{padding:25px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #eee8e4}
+.alert-panel h2{font-size:19px;letter-spacing:-.035em;color:#30211f;margin:0 0 4px}
+.alert-panel-head p{font-size:12px;color:#8b7b73;margin:0;line-height:1.55}
+.alert-preferences{padding:6px 25px 24px}
+.alert-pref{display:flex;gap:12px;align-items:flex-start;padding:15px 0;cursor:pointer;border-bottom:1px solid #f2eeeb}
+.alert-pref:last-child{border:0}
+.alert-pref>input{accent-color:#7b414a;width:17px;height:17px;margin:4px 0 0;flex-shrink:0}
+.alert-pref span{display:flex;flex-direction:column;gap:4px;min-width:0}
+.alert-pref strong{font-size:13px;color:#332421;font-weight:720}
+.alert-pref small{font-size:11px;color:#8a7a73;line-height:1.5}
+.alert-pref-inline{justify-content:space-between;align-items:center;gap:12px}
+.alert-pref-inline select{max-width:135px;min-height:40px;padding:7px 9px;border:1px solid #e5dbd4;border-radius:10px;background:#fff;color:#4b3834}
+.alert-switch{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#654940;white-space:nowrap;cursor:pointer}
+.alert-switch input{width:20px;height:20px;accent-color:#75404b}
+.alert-actions{display:flex;flex-direction:column;align-items:flex-start;gap:11px;margin-top:22px}
+.alert-actions small{font-size:11px;color:#8a7a73;line-height:1.5}
+.alert-items{padding:4px 10px;max-height:620px;overflow:auto}
+.alert-item{display:flex;align-items:flex-start;gap:13px;padding:20px 14px;border-bottom:1px solid #f2eeec}
+.alert-item:last-child{border:0}
+.alert-item.read{opacity:.67}
+.alert-dot{display:inline-block;flex:0 0 9px;height:9px;margin-top:6px;border-radius:20px;background:#a74b4b}
+.alert-item.read .alert-dot{background:#d9d0cc}
+.alert-item-content{min-width:0;flex:1}
+.alert-item strong{display:block;color:#352722;font-size:13px;line-height:1.4}
+.alert-item p{margin:6px 0;font-size:12px;line-height:1.6;color:#776a63}
+.alert-item small{font-size:10px;color:#9b8b83}
+.alert-item .btn{min-width:auto;font-size:11px;padding:8px 11px;flex-shrink:0}
+.alert-empty{padding:25px;color:#91817a;font-size:13px}
+.alert-device-panel .alert-panel-head{background:#fcfaf9}
+.alert-device-row{display:flex;align-items:center;gap:13px;padding:20px 26px;border-bottom:1px solid #f2eeeb}
+.alert-device-icon{display:grid;place-items:center;width:39px;height:39px;flex:0 0 39px;background:#f8edea;border-radius:12px;color:#753e44;font-size:21px}
+.alert-device-row>div:nth-child(2){display:flex;flex-direction:column;min-width:0;flex:1;gap:5px}
+.alert-device-row strong{font-size:13px;color:#392722}
+.alert-device-row span{font-size:12px;color:#71615b}
+.alert-device-row small{font-size:10px;color:#9a8a82}
+.alert-device-actions{display:flex;gap:8px;flex-wrap:wrap}
+.alert-device-actions .btn{font-size:11px;padding:9px 12px;min-width:auto}
+.alert-device-history{border-top:1px solid #eee8e4}
+.alert-device-history summary{cursor:pointer;font-weight:650;font-size:13px;padding:17px 26px;color:#65423e}
+.alert-security-note{font-size:11px;line-height:1.6;color:#897971;padding:20px 26px 24px;border-top:1px solid #f2eeeb;margin:0;background:#fcfaf9}
+.alert-error{border:1px solid #e4af9f;background:#fff5f2;border-radius:16px;padding:18px 22px;margin-bottom:22px;color:#843e34}
+.alert-error strong{display:block;margin-bottom:5px}
+.alert-error p{font-size:13px;margin:0 0 7px}
+.alert-error small{font-size:11px;line-height:1.5}
+.device-gate{min-height:100vh;display:grid;place-items:center;background:linear-gradient(140deg,#2c2024,#5c303c);padding:25px}
+.device-gate.hidden{display:none}
+.device-gate-card{width:min(100%,460px);padding:35px;background:#fffdfa;border:1px solid #eadbd4;border-radius:22px;box-shadow:0 30px 80px rgba(20,0,0,.2)}
+.device-gate-card .brand{color:#512b34;display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.09em;font-weight:800}
+.device-gate-card .brand-logo{height:36px;width:auto;max-width:66px;object-fit:contain}
+.device-gate-icon{width:62px;height:62px;display:grid;place-items:center;border-radius:16px;margin-top:39px;background:#f7e9e7;color:#753b44;font-size:34px}
+.device-gate-card h1{margin:20px 0 10px;font-size:28px;letter-spacing:-.05em;line-height:1.15;color:#2b2220}
+.device-gate-card p{font-size:14px;line-height:1.7;color:#776963;margin-bottom:13px}
+.device-gate-card small{font-size:12px;color:#9b8c85}
+.device-gate-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.device-gate-actions .btn{font-size:12px}
+@media(max-width:1050px){.alert-layout{grid-template-columns:1fr}}
+@media(max-width:650px){.alert-center{padding-bottom:96px}.alert-panel-head{padding:21px 18px}.alert-page-head{align-items:center}.alert-page-head .btn{padding:8px 12px}.alert-preferences{padding:5px 18px 21px}.alert-device-row{padding:15px 18px;align-items:flex-start;flex-wrap:wrap}.alert-device-actions{width:100%;padding-left:52px}.alert-device-history summary{padding:17px 18px}.alert-security-note{padding:18px}.alert-item{padding:17px 8px}.alert-item .btn{padding:7px}.alert-panel h2{font-size:17px}.alert-switch{font-size:11px}.alert-bell{width:37px;height:37px;flex-basis:37px;margin-left:auto}}
